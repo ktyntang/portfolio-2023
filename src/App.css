@@ -1,0 +1,23 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+
+	height: 100vh;
+	width: 100vw;
+
+	font-family: "Rubik", sans-serif;
+
+	--purple: rgb(123, 31, 162);
+	--violet: rgb(103, 58, 183);
+	--pink: rgb(244, 143, 177);
+}
+
+#root * {
+	box-sizing: border-box;
+}
+
+#root h1 {
+	cursor: default;
+}
