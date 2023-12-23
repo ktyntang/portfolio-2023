@@ -29,13 +29,6 @@
 	}
 }
 
-h1 {
-	color: white;
-	font-weight: 400;
-	margin: 0px;
-	text-align: center;
-}
-
 h1 > .magic {
 	display: inline-block;
 	position: relative;

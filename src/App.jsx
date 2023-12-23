@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BgMouseHover from "./components/BgMouseHover";
 // import { NavBar } from "./components/NavBar";
 // import { Banner } from "./components/Banner";
 // import { Skills } from "./components/Skills";
@@ -10,9 +11,6 @@ import "./App.css";
 import "./components/Banner.css";
 
 const Banner = () => {
-	let index = 0,
-		interval = 1000;
-
 	const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 	const animate = (star) => {
@@ -29,7 +27,6 @@ const Banner = () => {
 
 	const handleMouseEnter = () => {
 		let index = 1;
-
 		for (const star of document.getElementsByClassName("magic-star")) {
 			timeouts.push(
 				setTimeout(() => {
@@ -73,14 +70,14 @@ const Banner = () => {
 			</h1>
 			<div className='mx-auto flex w-fit'>
 				<p>Your</p>
-				<div
+				<p
 					className='rotate-words relative mx-1 h-6 overflow-hidden font-bold text-violet-400'
 					style={{ width: "4.1rem" }}
 				>
 					<span style={{ "--i": 0 }}>reliable</span>
 					<span style={{ "--i": 1 }}>friendly</span>
 					<span style={{ "--i": 2 }}>sensible</span>
-				</div>
+				</p>
 				<p>fullstack software engineer.</p>
 			</div>
 		</div>
@@ -90,11 +87,12 @@ const Banner = () => {
 const SocialBubble = ({ icon, link }) => {
 	return (
 		<button
-			className='border-1 m-1 rounded-full  border-violet-700 bg-transparent'
+			// className='border-1 m-1 rounded-full  border-violet-700 bg-transparent'
+			className='block bg-transparent'
 			style={{ padding: "0.3em 0.6em" }}
 		>
 			<a href={link} target='_blank' rel='noreferrer'>
-				<i className={`${icon} m-0 p-0 text-violet-500`}></i>
+				<i className={`${icon} m-0 p-0`}></i>
 			</a>
 		</button>
 	);
@@ -104,22 +102,28 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<div className='container'>
-			{/* <NavBar /> */}
-			<div className='container' id='navbar'>
-				<div className='social-links absolute right-4 top-4 flex flex-row'>
-					<SocialBubble icon='fab fa-linkedin' link='https://www.linkedin.com/in/ktyntang/' />
-					<SocialBubble icon='fab fa-github' link='https://www.github.com/ktyntang' />
-					<SocialBubble icon='fas fa-envelope' link='mailto:ktyntang@gmail.com' />
-				</div>
-			</div>
+		<>
+			<BgMouseHover />
 
-			<Banner />
-			{/* <Skills /> */}
-			{/* <Projects /> */}
-			{/* <Contact /> */}
-			{/* <Footer /> */}
-		</div>
+			<div className='relative z-10'>
+				{/* <NavBar /> */}
+				<div className='social-links absolute right-4 top-4 flex w-fit flex-col'>
+					<SocialBubble
+						icon='fab fa-linkedin'
+						link='https://www.linkedin.com/in/ktyntang/'
+						title='LinkedIn'
+					/>
+					<SocialBubble icon='fab fa-github' link='https://www.github.com/ktyntang' title='GitHub' />
+					<SocialBubble icon='fas fa-envelope' link='mailto:ktyntang@gmail.com' title='Email' />
+				</div>
+
+				<Banner />
+				{/* <Skills /> */}
+				{/* <Projects /> */}
+				{/* <Contact /> */}
+				{/* <Footer /> */}
+			</div>
+		</>
 	);
 }
 
