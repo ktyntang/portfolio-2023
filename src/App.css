@@ -1,22 +1,29 @@
 @font-face {
-	font-family: "Rastaglion"; /*Can be any text*/
+	font-family: "Rastaglion";
 	src:
 		local("Rastaglion"),
 		url("./fonts/Rastaglion.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Floral"; /*Can be any text*/
+	font-family: "Floral";
 	src:
 		local("Floral"),
 		url("./fonts/Floral.otf") format("opentype");
 }
 
 @font-face {
-	font-family: "FlyingPeace"; /*Can be any text*/
+	font-family: "FlyingPeace";
 	src:
 		local("FlyingPeace"),
 		url("./fonts/FlyingPeace.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Montserrat-V";
+	src:
+		local("Montserrat-V"),
+		url("./fonts/Montserrat-V.ttf") format("truetype");
 }
 
 .font-rastaglion {
@@ -27,6 +34,11 @@
 }
 .font-flyingpeace {
 	font-family: "FlyingPeace";
+}
+
+.font-montserrat {
+	font-family: "Montserrat-V", sans-serif;
+	font-weight: 200;
 }
 
 #root {
@@ -104,12 +116,12 @@ span {
 
 @keyframes fadeZoomIn {
 	0% {
-		opacity: 0;
-		transform: scale(0.5);
+		opacity: 0.5;
+		transform: scale(0.8) translateY(-10%);
 	}
 	100% {
 		opacity: 1;
-		transform: scale(1);
+		transform: scale(1) translateY(0%);
 	}
 }
 
@@ -124,10 +136,10 @@ span {
 	top: 50%;
 	translate: -50% -50%;
 	border-radius: 60%;
-	background: linear-gradient(to right, cyan, slateblue, var(--pink));
+	background: linear-gradient(to right, cyan, slateblue, coral);
 	animation: rotate 4s infinite alternate;
-	opacity: 0.65;
-	filter: saturate(0.7);
+	opacity: 0.9;
+	filter: saturate(0.8);
 	z-index: 1;
 }
 
@@ -143,7 +155,7 @@ span {
 span#symbol {
 	position: absolute;
 	display: inline-block;
-	left: -2.5px;
+	left: calc(1.5rem - 2.5px);
 	bottom: 1rem;
 	width: 5px;
 	height: 5px;
@@ -165,14 +177,14 @@ span#symbol {
 	border-image: linear-gradient(to bottom, rgb(221, 217, 255) 60%, var(--violet400)) 1 100%;
 }
 
-#navbar a {
+#navbar button {
 	line-height: 1.5;
 	position: relative;
 	transform: translateX(-25px);
 	transition: all 0.3s ease-in-out;
 }
 
-#navbar a span {
+#navbar button span {
 	display: inline-block;
 	height: 100%;
 	width: 25px;
@@ -180,7 +192,7 @@ span#symbol {
 	position: relative;
 }
 
-#navbar a span::before {
+#navbar button span::before {
 	content: "";
 	position: absolute;
 	left: -8px;
@@ -190,13 +202,10 @@ span#symbol {
 	background-color: rgb(221, 217, 255);
 	transition: all 0.3s ease-in-out;
 }
-#navbar a:hover span::before {
+#navbar button:hover span::before {
 	content: "";
 }
 
-#navbar a:hover span {
-}
-
-#navbar a:hover {
+#navbar button:hover {
 	transform: translateX(-1px);
 }

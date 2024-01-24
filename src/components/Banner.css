@@ -79,6 +79,7 @@ h1 > .magic > .magic-text {
 	animation-timing-function: cubic-bezier(0.87, -0.41, 0.19, 1.34);
 	text-align: center;
 	width: 100%;
+	
 }
 
 @keyframes spin_words {

@@ -6,7 +6,6 @@ const BgMouseHover = () => {
 	window.onpointermove = (event) => {
 		const { clientX, clientY } = event;
 
-		console.log(mouseBlobRef.current, clientX, clientY);
 		if (mouseBlobRef.current === null) return;
 
 		mouseBlobRef.current.animate(
