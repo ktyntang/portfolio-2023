@@ -141,13 +141,14 @@ span {
 	opacity: 0.9;
 	filter: saturate(0.8);
 	z-index: 1;
+	filter: blur(9vmax);
 }
 
 #blur {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	backdrop-filter: blur(13vmax);
+	backdrop-filter: blur(1vmax);
 	z-index: 2;
 }
 
