@@ -388,10 +388,10 @@ function App() {
 
 	return (
 		// <div className='h-screen overflow-y-scroll' onScroll={(e) => handleScroll(e)}>
-		<div className=''>
+		<div className='h-full'>
 			<BgMouseHover />
 
-			<div className='max-w relative z-10 m-auto h-[98vh] max-w-7xl px-6 py-4'>
+			<div className='max-w relative z-10 m-auto h-full max-w-7xl px-6 py-4'>
 				<SocialBar />
 
 				<div className='flex h-full w-full flex-row' id='namecard'>
