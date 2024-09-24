@@ -164,7 +164,7 @@ const NavBar = ({ route, changeRoute }) => {
 		<>
 			<nav
 				id='navbar'
-				className='font-rastaglion absolute bottom-4 left-6 flex w-fit flex-col text-lg sm:text-2xl'
+				className='font-rastaglion absolute bottom-[calc(100%-22rem)] left-6 flex w-fit flex-col text-lg  min-[360px]:bottom-4 sm:text-2xl'
 			>
 				{route !== HOME && (
 					<button
@@ -322,6 +322,12 @@ const Projects = () => {
 				<li className='text-xs'>
 					2024 <span className='hidden sm:inline-block'>Professional</span> / Fullstack
 					<a className='ml-1 block text-sm font-medium  text-white sm:inline-block sm:text-base sm:font-semibold md:text-lg md:font-bold '>
+						Geospatial Web App
+					</a>
+				</li>
+				<li className='text-xs'>
+					2024 <span className='hidden sm:inline-block'>Professional</span> / Fullstack
+					<a className='ml-1 block text-sm font-medium  text-white sm:inline-block sm:text-base sm:font-semibold md:text-lg md:font-bold '>
 						3D Building Inspector
 					</a>
 				</li>
@@ -337,7 +343,7 @@ const Projects = () => {
 					</a>
 				</li>
 				<li className='text-xs'>
-					2022 <span className='hidden sm:inline-block'>Comission</span> / Artist Portfolio
+					2022 <span className='hidden sm:inline-block'>Commission</span> / Artist Portfolio
 					<a
 						className='ml-1 block text-sm font-medium  text-white sm:inline-block sm:text-base sm:font-semibold md:text-lg md:font-bold '
 						href='https://2022.kspaze1.art/'
@@ -348,7 +354,7 @@ const Projects = () => {
 					</a>
 				</li>
 				<li className='text-xs'>
-					2023 <span className='hidden sm:inline-block'>Comission</span> / NFT Gallery
+					2023 <span className='hidden sm:inline-block'>Commission</span> / NFT Gallery
 					<a
 						className='ml-1 block text-sm font-medium  text-white sm:inline-block sm:text-base sm:font-semibold md:text-lg md:font-bold '
 						href='https://kspaze1.art/'
