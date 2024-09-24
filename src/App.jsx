@@ -9,52 +9,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import NavBar from "./components/NavBar";
 
-// const createCardFlipId = (index) => `listItem-${index}`;
-// const shouldFlip = (index) => (prev, current) => index === prev || index === current;
-// const ExpandedListItem = ({ index, onClick }) => {
-// 	return (
-// 	  <Flipped
-// 		flipId={createCardFlipId(index)}
-// 		stagger="card"
-// 		onStart={el => {
-// 		  setTimeout(() => {
-// 			el.classList.add("animated-in");
-// 		  }, 400);
-// 		}}
-// 	  >
-// 		<div className="expandedListItem" onClick={() => onClick(index)}>
-// 		  <Flipped inverseFlipId={createCardFlipId(index)}>
-// 			<div className="expandedListItemContent">
-// 			  <Flipped
-// 				flipId={`avatar-${index}`}
-// 				stagger="card-content"
-// 				delayUntil={createCardFlipId(index)}
-// 			  >
-// 				<div className="avatar avatarExpanded" />
-// 			  </Flipped>
-// 			  <div className="description">
-// 				{listData.slice(0, 3).map(i => (
-// 				  <Flipped
-// 					flipId={`description-${index}-${i}`}
-// 					stagger="card-content"
-// 					delayUntil={createCardFlipId(index)}
-// 				  >
-// 					<div />
-// 				  </Flipped>
-// 				))}
-// 			  </div>
-// 			  <div className="additional-content">
-// 				{listData.slice(0, 3).map(i => (
-// 				  <div />
-// 				))}
-// 			  </div>
-// 			</div>
-// 		  </Flipped>
-// 		</div>
-// 	  </Flipped>
-// 	);
-//   };
-
 const NameCardL = ({ route }) => {
 	return (
 		<div
@@ -82,7 +36,7 @@ const NameCardL = ({ route }) => {
 
 const NameCardR = () => {
 	return (
-		<div id='namecard-R' className='font-rastaglion flex w-full grow flex-col'>
+		<div id='namecard-R' className='font-rastaglion absolute bottom-4 right-6 w-full'>
 			<div className='mt-auto flex flex-col text-right'>
 				<span className='text-2xl'>Your</span>
 				<h2 className='rotate-words relative ml-auto h-7 w-24 overflow-hidden text-left text-2xl font-bold text-violet-400'>
