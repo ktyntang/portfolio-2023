@@ -16,7 +16,7 @@ const NameCardL = ({ route }) => {
 			className='flex w-fit flex-1 flex-col text-left'
 			style={{ animation: "fadeZoomIn 0.8s ease-out" }}
 		>
-			<h1 className='text-6xl sm:text-8xl md:text-8xl lg:text-9xl'>
+			{/* <h1 className='text-6xl sm:text-8xl md:text-8xl lg:text-9xl'>
 				<div className='block text-nowrap leading-10'>
 					<div className='font-floral inline-block'>k</div>
 					<div className='inline-block font-black'>-</div>
@@ -28,6 +28,18 @@ const NameCardL = ({ route }) => {
 				<span className='font-flyingpeace'>a</span>
 				<span className='font-floral px-1'>n</span>
 				<span className='font-flyingpeace'>g</span>
+			</h1> */}
+			<h1 className='text-6xl sm:text-8xl md:text-8xl lg:text-9xl'>
+				<div className='block text-nowrap leading-10'>
+					<div className='font-flyingpeace inline-block'>k</div>
+					<div className='font-floral font inline-block tracking-widest'>ay</div>
+				</div>
+				<span className='font-floral'>m</span>
+				<span className='font-flyingpeace'>a</span>
+				<span className='font-floral tracking-wider'>c</span>
+				<span className='font-flyingpeace'>k</span>
+				<span className='font-floral pl-1 tracking-widest'>li</span>
+				<span className='font-flyingpeace'>n</span>
 			</h1>
 			<p className='font-rastaglion ml-1'>{route !== HOME ? "Fullstack Developer" : "Open To Work"}</p>
 		</div>
